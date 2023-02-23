@@ -1,8 +1,9 @@
 import streamlit as st
 
 st.title("Tax test")
+st.write("Tax testing.  Not cpmplete, but getting there...")
 
-income_total = float(input("Total income: "))
+income_total: float = st.text_input("Total income: ")
 deduction_total = float(input("Total deductions: "))
 finance_cost_total = float(input("Total finance costs: "))
 division = int(input("How many people is this divided by: "))
