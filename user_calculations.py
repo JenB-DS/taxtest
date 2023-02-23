@@ -8,6 +8,7 @@ deduction_total: float = st.text_input("Total deductions: ")
 finance_cost_total: float = st.text_input("Total finance costs: ")
 division: int = st.text_input("How many people is this divided by: ")
 
+tax = 0
 
 def calc_taxtest(income_total, deduction_total, finance_cost_total, division):
     income_totalpp = round(income_total/division, 2)
@@ -20,7 +21,8 @@ def calc_taxtest(income_total, deduction_total, finance_cost_total, division):
     # can deduct a further 20% of mortgage interest costs
     tax_credit = round(finance_cost_totalpp * 0.2, 2)
     tax_owedpp = round(income_tax_profit - tax_credit, 2)
-    return tax_owedpp
+    
+    st.success(f"Tax owed per person {tax_owedpp}")
 
 # tax_owedpp = calc_taxtest(income_total, deduction_total, finance_cost_total, division)
 # print(tax_owedpp)
