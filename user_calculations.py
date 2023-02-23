@@ -3,12 +3,11 @@ import streamlit as st
 st.title("Tax test")
 st.write("Tax testing.  Not cpmplete, but getting there...")
 
-income_total: float = st.text_input("Total income: ")
-deduction_total: float = st.text_input("Total deductions: ")
-finance_cost_total: float = st.text_input("Total finance costs: ")
-division: int = st.text_input("How many people is this divided by: ")
+income_total: float = st.number_input("Total income: ")
+deduction_total: float = st.number_input("Total deductions: ")
+finance_cost_total: float = st.number_input("Total finance costs: ")
+division: int = st.number_input("How many people is this divided by: ")
 
-tax = 0
 
 def calc_taxtest(income_total, deduction_total, finance_cost_total, division):
     income_totalpp = round(income_total/division, 2)
