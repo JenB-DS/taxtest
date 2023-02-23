@@ -4,9 +4,9 @@ st.title("Tax test")
 st.write("Tax testing.  Not cpmplete, but getting there...")
 
 income_total: float = st.text_input("Total income: ")
-deduction_total = float(input("Total deductions: "))
-finance_cost_total = float(input("Total finance costs: "))
-division = int(input("How many people is this divided by: "))
+deduction_total: float = st.text_input("Total deductions: ")
+finance_cost_total: float = st.text_input("Total finance costs: ")
+division: int = st.text_input("How many people is this divided by: ")
 
 
 def calc_taxtest(income_total, deduction_total, finance_cost_total, division):
@@ -22,5 +22,8 @@ def calc_taxtest(income_total, deduction_total, finance_cost_total, division):
     tax_owedpp = round(income_tax_profit - tax_credit, 2)
     return tax_owedpp
 
-tax_owedpp = calc_taxtest(income_total, deduction_total, finance_cost_total, division)
-print(tax_owedpp)
+# tax_owedpp = calc_taxtest(income_total, deduction_total, finance_cost_total, division)
+# print(tax_owedpp)
+
+if st.button("Calculate tax"):
+    calc_taxtest(income_total, deduction_total, finance_cost_total, division)
