@@ -1,4 +1,6 @@
-import pandas as pd
+import streamlit as st
+
+st.title("Tax test")
 
 income_total = float(input("Total income: "))
 deduction_total = float(input("Total deductions: "))
@@ -20,3 +22,4 @@ def calc_taxtest(income_total, deduction_total, finance_cost_total, division):
     return tax_owedpp
 
 tax_owedpp = calc_taxtest(income_total, deduction_total, finance_cost_total, division)
+print(tax_owedpp)
