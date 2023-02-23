@@ -1,7 +1,8 @@
 import streamlit as st
 
 st.title("Tax test")
-st.write("Tax testing.  Not cpmplete, but getting there...")
+st.write("Testing out some code to calulate tax...")
+st.write("---")
 
 income_total: st.number_input("Total income: ")
 deduction_total: st.number_input("Total deductions: ")
