@@ -1,5 +1,11 @@
 import streamlit as st
 
+st.set_page_config(
+    page_title="Testing tax!",
+    page_icon="😎",
+    layout="wide"
+)
+
 st.title("Tax test")
 st.write("Testing out some code to calulate tax...")
 st.write("---")
