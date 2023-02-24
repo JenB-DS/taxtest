@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(
     page_title="Testing tax!",
-    page_icon="😎"
+    page_icon="😎"git 
 )
 
 st.title("Tax test")
